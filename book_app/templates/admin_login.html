@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Phitron Library Management System {% endblock %}
+{% block css %}
+{% endblock %}
+{% block body %}
+<div class="container">
+<br>
+<h1 class="text-center"><u>Login Form(Admin)</u></h1><br>
+<h4 class="text-danger text-center"><b>This is the admin login form</b> </h4>
+    <form method="POST"> {% csrf_token %}
+
+    <div class="row mt-4">
+        <div class="form-group col-md-6 mx-auto">
+            <label><i style="font-weight: bold;">Username</i></label>
+            <input type="text" class="form-control mt-2" name="username" placeholder="Enter Username" required>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="form-group col-md-6 mx-auto">
+            <label><i style="font-weight: bold;">Password</i></label>
+            <input type="password" class="form-control mt-2" name="password" placeholder="Enter Password" required>
+        </div>
+    </div>
+   <div class="text-center">
+    <button type="submit" class="btn btn-outline-secondary mt-4" style="font-weight: bold;">Submit</button>
+   </div>
+
+</div>
+{% endblock %}
+{% block js %}
+<script>
+    {% if alert %}
+    alert("Please, Enter correct Username or password")
+    document.location = "/admin_login"
+    {% endif %}
+</script>
+{% endblock %}

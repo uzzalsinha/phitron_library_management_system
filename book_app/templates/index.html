@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Phitron Library Management System {% endblock %}
+{% block css %}
+{% endblock %}
+{% block body %}
+<div class="p-4 bg-light">
+    <div class="container-fluid py-3">
+      <h1 class="display-5 fw-bold">Welcome to Phitron Library Management System</h1>
+      <p class="col-md-8 fs-4">To gather knowledge, register here</p>
+      <a href="/student_registration/" class="btn btn-primary btn-lg">Register as Student</a>
+    </div>
+    <br>
+    <div class="container">
+  <div class="row">
+
+    <div class="col-lg-6">
+      <img src="{% static 'phitron.png' %}" width="50%" height="50%" alt=""><br><br>
+      <a href="/admin_login/"><button type="submit" class="btn btn-outline-secondary mt-4" style="font-weight: bold;">Admin Login</button></a>
+    </div>
+
+    <div class="col-lg-6">
+      <img src="{% static 'stu.png' %}" width="50%" height="50%" alt=""><br><br>
+      
+      <a href="/student_login/"><button type="submit" class="btn btn-outline-secondary mt-4" style="font-weight: bold;" >Student Login</button></a>
+      
+    </div>
+  </div>
+  </div>
+</div>
+{% endblock %}
